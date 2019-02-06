@@ -8,15 +8,27 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     
 <body>
-
+    <div>
     <h1>Blackjack</h1>
-    <p id="text-area"></p>
-    <button id="new-game-button">New game</button>
-    <button id="hit-button">Hit</button>
-    <button id="stay-button">Stay</button>
+    <div id="dealer-area">
+        <div id="dealer-text-area"></div>
+        <div id="dealer-cards-area"></div>
+        <p id="text-area"></p>
+    </div>
+    <div id="player-area">
+        <div id="player-text-area"></div>
+        <div id="player-cards-area"></div>
+    </div>
+    <div id="buttons-area">
+        <button id="new-game-button">New game</button>
+        <button id="hit-button">Hit</button>
+        <button id="stay-button">Stay</button>
+    </div>
+    </div>
     <!-- TO DO
     <img class="card-face" src="img/English_pattern_10_of_diamonds.png" width="100%">
     -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -7,6 +7,11 @@ let textArea = document.getElementById('text-area');
 let newGameButton = document.getElementById('new-game-button');
 let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
+let dealerTextArea = document.getElementById('dealer-text-area');
+let dealerCardsArea = document.getElementById('dealer-cards-area');
+let playerTextArea = document.getElementById('player-text-area');
+let playrCardsArea = document.getElementById('player-cards-area');
+
 
 //Game variables
 let gameStarted = false,
@@ -175,19 +180,22 @@ function showStatus(){
     for (let i = 0; i < playerCards.length; i++){
         playerCardsString += getCardName(playerCards[i]) + '\n';
     }
-
+    console.log(playerCards);
+    console.log(dealerCards);
     updateScores();
     
-    textArea.innerText =
-    'Dealer has:\n' +
+    textArea.innerText = ''; 
+
+    dealerTextArea.innerText =
+    'Dealer has: \n' +
     dealerCardsString +
-    'Score: ' + dealerScore +
-    '\n\n'+
+    'Score: ' + dealerScore;
+
+    playerTextArea.innerText =
     'You have:\n' +
     playerCardsString +
-    'Score: ' + playerScore +
-    '\n\n';
-    
+    'Score: ' + playerScore; 
+   
     if (gameOver === true){
         if (playerWon === true){
             textArea.innerText += 'You win!';
