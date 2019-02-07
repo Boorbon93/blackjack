@@ -10,7 +10,7 @@ let stayButton = document.getElementById('stay-button');
 let dealerTextArea = document.getElementById('dealer-text-area');
 let dealerCardsArea = document.getElementById('dealer-cards-area');
 let playerTextArea = document.getElementById('player-text-area');
-let playrCardsArea = document.getElementById('player-cards-area');
+let playerCardsArea = document.getElementById('player-cards-area');
 
 
 //Game variables
@@ -88,6 +88,9 @@ return deck;
 
 function getCardName(card){
     return card.value + ' of ' + card.color; 
+}
+function getGraphicsName(card){
+    return card.value + '_of_' + card.color + '.png';
 }
 
 function evaluateCard(card) {
@@ -172,16 +175,20 @@ function showStatus(){
     }
 
     let dealerCardsString = '';
+    let dealerCardsFilenames = '';
     for (let i = 0; i < dealerCards.length; i++){
         dealerCardsString += getCardName(dealerCards[i]) + '\n';
+        dealerCardsFilenames += `<img src="img/${getGraphicsName(dealerCards[i])}">`;
     }
-
+    dealerCardsArea.innerHTML = `${dealerCardsFilenames}`; 
+    
     let playerCardsString = '';
+    let playerCardsFilenames = '';
     for (let i = 0; i < playerCards.length; i++){
         playerCardsString += getCardName(playerCards[i]) + '\n';
+        playerCardsFilenames += `<img src="img/${getGraphicsName(playerCards[i])}">`;
     }
-    console.log(playerCards);
-    console.log(dealerCards);
+    playerCardsArea.innerHTML = `${playerCardsFilenames}`;
     updateScores();
     
     textArea.innerText = ''; 
