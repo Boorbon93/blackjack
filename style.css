@@ -17,7 +17,7 @@ div {
 }
 .title {
     padding: 20px 0px;
-    font-size: 5em;
+    font-size: 4em;
     margin: 0 auto; 
     font-family: 'Sancreek';
     text-shadow:0px 2px 0px #b23e35
@@ -33,14 +33,13 @@ div {
 
 .text-area {
     font-family: 'Sancreek';
-    font-size: 2em;
-    padding: 10px 0px;
-    display: block;
+    font-size: 1.2em;
+    display: block;git 
 }
 
 #status-text-area {
-    margin: 20px 0px; 
-    font-size: 40px; 
+    margin: 0px; 
+    font-size: 25px; 
     font-family: 'Sancreek';
     font-weight: bold;
     display: block;
@@ -73,7 +72,7 @@ div {
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:2em;
+	font-size:1.2em;
 	font-weight:bold;
 	padding:6px 20px;
 	text-decoration:none;
