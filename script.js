@@ -3,7 +3,7 @@ const colors = ['Hearts','Spades','Diamonds','Clubs'];
 const values = ['Ace','King','Queen','Jack','Ten','Nine','Eight','Seven','Six','Five','Four','Three','Two'];
 
 //DOM references 
-let textArea = document.getElementById('text-area');
+let statusTextArea = document.getElementById('status-text-area');
 let newGameButton = document.getElementById('new-game-button');
 let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
@@ -11,7 +11,6 @@ let dealerTextArea = document.getElementById('dealer-text-area');
 let dealerCardsArea = document.getElementById('dealer-cards-area');
 let playerTextArea = document.getElementById('player-text-area');
 let playerCardsArea = document.getElementById('player-cards-area');
-
 
 //Game variables
 let gameStarted = false,
@@ -28,7 +27,6 @@ hitButton.style.display = 'none';
 stayButton.style.display = 'none';
 showStatus();
 
-//First game
 newGameButton.addEventListener("click", function(){
     gameStarted = true;
     gameOver = false;
@@ -39,7 +37,7 @@ newGameButton.addEventListener("click", function(){
     playerCards = [drawCard(),drawCard()];
     dealerCards = [drawCard(),drawCard()];
     
-    textArea.innerText = 'Game started!';
+    statusTextArea.innerText = 'Game started!';
     newGameButton.style.display = 'none';
     hitButton.style.display = 'inline';
     stayButton.style.display = 'inline';
@@ -58,7 +56,6 @@ stayButton.addEventListener('click', function(){
     showStatus();
     
 });
-
 
 function createDeck() {
 let deck = [];
@@ -170,45 +167,45 @@ function checkIfGameEnded(){
 
 function showStatus(){
     if(gameStarted === false){
-        textArea.innerText = 'Welcome to Blackjack';
+        statusTextArea.innerText = 'Welcome to Blackjack!';
         return;
     }
 
     let dealerCardsString = '';
     let dealerCardsFilenames = '';
     for (let i = 0; i < dealerCards.length; i++){
-        dealerCardsString += getCardName(dealerCards[i]) + '\n';
-        dealerCardsFilenames += `<img src="img/${getGraphicsName(dealerCards[i])}">`;
+        dealerCardsString += getCardName(dealerCards[i]) + ', ';
+        dealerCardsFilenames += `<img src="img/${getGraphicsName(dealerCards[i])}" class="card-face">`;
     }
     dealerCardsArea.innerHTML = `${dealerCardsFilenames}`; 
     
     let playerCardsString = '';
     let playerCardsFilenames = '';
     for (let i = 0; i < playerCards.length; i++){
-        playerCardsString += getCardName(playerCards[i]) + '\n';
-        playerCardsFilenames += `<img src="img/${getGraphicsName(playerCards[i])}">`;
+        playerCardsString += getCardName(playerCards[i]) + ', ';
+        playerCardsFilenames += `<img src="img/${getGraphicsName(playerCards[i])}" class="card-face">`;
     }
     playerCardsArea.innerHTML = `${playerCardsFilenames}`;
     updateScores();
     
-    textArea.innerText = ''; 
+    statusTextArea.innerText = ''; 
 
     dealerTextArea.innerText =
-    'Dealer has: \n' +
-    dealerCardsString +
+    'Dealer has:\n' +
+    dealerCardsString + '\n' +
     'Score: ' + dealerScore;
 
     playerTextArea.innerText =
     'You have:\n' +
-    playerCardsString +
+    playerCardsString + '\n' +
     'Score: ' + playerScore; 
    
     if (gameOver === true){
         if (playerWon === true){
-            textArea.innerText += 'You win!';
+            statusTextArea.innerText += 'You win!';
         }
         else{
-            textArea.innerText += 'You lose!';
+            statusTextArea.innerText += 'You lose!';
         }
     newGameButton.style.display = 'inline';
     hitButton.style.display = 'none';

@@ -6,29 +6,24 @@
     <title>BlackJack</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sancreek">
 <body>
-    <div>
-    <h1>Blackjack</h1>
-    <div id="dealer-area">
-        <div id="dealer-text-area"></div>
-        <div id="dealer-cards-area">
+    <div class="container">
+        <h1 class="title">Blackjack</h1>
+        <div id="dealer-area">
+            <div class="text-area" id="dealer-text-area"></div>
+            <div id="dealer-cards-area"></div>
         </div>
-        <p id="text-area"></p>
+        <div class="text-area" id="status-text-area"></div>
+        <div id="player-area">
+            <div id="player-cards-area"></div>
+            <div class="text-area" id="player-text-area"></div>
+        </div>
+        <div id="buttons-area">
+        <button class="button" id="new-game-button">New game</button>
+        <button class="button" id="hit-button">Hit</button>
+        <button class="button" id="stay-button">Stay</button>
     </div>
-    <div id="player-area">
-        <div id="player-text-area"></div>
-        <div id="player-cards-area"></div>
-    </div>
-    <div id="buttons-area">
-        <button id="new-game-button">New game</button>
-        <button id="hit-button">Hit</button>
-        <button id="stay-button">Stay</button>
-    </div>
-    </div>
-    <!-- TO DO
-    <img class="card-face" src="img/English_pattern_10_of_diamonds.png" width="100%">
-    -->
     </div>
     <script src="script.js"></script>
 </body>
