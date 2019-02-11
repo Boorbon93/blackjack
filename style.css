@@ -1,26 +1,77 @@
 body {
     margin: 0 auto;
 }
-.container{
-    background: #bfd255;
-    background: -moz-radial-gradient(center, ellipse cover, #bfd255 0%, #8eb92a 50%, #72aa00 56%, #9ecb2d 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, #bfd255 0%,#8eb92a 50%,#72aa00 56%,#9ecb2d 100%);
-    background: radial-gradient(ellipse at center, #bfd255 0%,#8eb92a 50%,#72aa00 56%,#9ecb2d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=1 );
-    width: auto;
-    height: 100vh;
-
-}
 
 div {
     text-align: center;
 }
+
+.bg-green {
+    background-image: url(img/bg-green.png);
+    height: 100vh;
+}
+
+.bg-blue {
+    background-image: url(img/bg-blue.png);
+    height: 100vh;
+}
+
+.bg-red {
+    background-image: url(img/bg-red.png);
+    height: 100vh;
+}
+
+.bg-icons-area {
+    height: 50px;
+    width: 200px;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+}
+
+#bg-green-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: solid 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-image: url(img/bg-green-icon.png);
+	-moz-box-shadow: 2px 3px 0px 0px rgba(44, 41, 41, 0.5);
+	-webkit-box-shadow: 2px 3px 0px 0px rgba(138, 138, 138, 0.5);
+}
+
+#bg-blue-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: solid 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-image: url(img/bg-blue-icon.png);
+	-moz-box-shadow: 2px 3px 0px 0px rgba(44, 41, 41, 0.5);
+	-webkit-box-shadow: 2px 3px 0px 0px rgba(138, 138, 138, 0.5);
+}
+
+#bg-red-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: solid 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-image: url(img/bg-red-icon.png);
+	-moz-box-shadow: 2px 3px 0px 0px rgba(44, 41, 41, 0.5);
+	-webkit-box-shadow: 2px 3px 0px 0px rgba(138, 138, 138, 0.5);
+}
+
 .title {
     padding: 20px 0px;
     font-size: 4em;
     margin: 0 auto; 
     font-family: 'Sancreek';
-    text-shadow:0px 2px 0px #b23e35
+    text-shadow:0px 2px 0px #3b211f
 }
 .card-face {
     width: 7%;
@@ -34,7 +85,7 @@ div {
 .text-area {
     font-family: 'Sancreek';
     font-size: 1.2em;
-    display: block;git 
+    display: block;
 }
 
 #status-text-area {
@@ -44,7 +95,7 @@ div {
     font-weight: bold;
     display: block;
     height: 30px;
-    text-shadow:0px 1px 0px #b23e35;
+    text-shadow:0px 1px 0px #3b211f;
 }
 
 #buttons-area {
@@ -76,8 +127,9 @@ div {
 	font-weight:bold;
 	padding:6px 20px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+	text-shadow:0px 1px 0px #3b211f;
 }
+
 .button:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
 	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
@@ -88,9 +140,8 @@ div {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
 	background-color:#ce0100;
 }
+
 .button:active {
 	position:relative;
 	top:1px;
 }
-
-

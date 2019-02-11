@@ -11,6 +11,11 @@ let dealerTextArea = document.getElementById('dealer-text-area');
 let dealerCardsArea = document.getElementById('dealer-cards-area');
 let playerTextArea = document.getElementById('player-text-area');
 let playerCardsArea = document.getElementById('player-cards-area');
+let backgroundGreenButton = document.getElementById('bg-green-button');
+let backgroundBlueButton = document.getElementById('bg-blue-button');
+let backgroundRedButton = document.getElementById('bg-red-button');
+let container = document.getElementById('container');
+
 
 //Game variables
 let gameStarted = false,
@@ -20,6 +25,8 @@ let gameStarted = false,
     dealerCards = [],
     playerScore = 0,
     dealerScore = 0,
+    playerWinCounter = 0,
+    dealerWinCounter = 0,
     deck = [];
 
 //Initialize first game
@@ -54,7 +61,20 @@ stayButton.addEventListener('click', function(){
     gameOver = true;
     checkIfGameEnded();
     showStatus();
-    
+});
+
+//Change background color
+backgroundBlueButton.addEventListener('click', function(){
+    container.removeAttribute('class');
+    container.classList.add('bg-blue');
+});
+backgroundRedButton.addEventListener('click', function(){
+    container.removeAttribute('class');
+    container.classList.toggle('bg-red');
+});
+backgroundGreenButton.addEventListener('click', function(){
+    container.removeAttribute('class');
+    container.classList.toggle('bg-green');
 });
 
 function createDeck() {
@@ -74,7 +94,7 @@ let deck = [];
 function shuffleDeck(deck){
     let counter = deck.length;
     while (counter > 0){
-        let index = Math.floor(Math.random()* counter);
+        let index = Math.floor(Math.random() * counter);
         counter --;
         let tempArray = deck[counter];
         deck[counter] = deck[index];

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sancreek">
 <body>
-    <div class="container">
+    <div id ="container" class="bg-green">
         <h1 class="title">Blackjack</h1>
         <div id="dealer-area">
             <div class="text-area" id="dealer-text-area"></div>
@@ -20,10 +20,23 @@
             <div class="text-area" id="player-text-area"></div>
         </div>
         <div id="buttons-area">
-        <button class="button" id="new-game-button">New game</button>
-        <button class="button" id="hit-button">Hit</button>
-        <button class="button" id="stay-button">Stay</button>
-    </div>
+            <button class="button" id="new-game-button">New game</button>
+            <button class="button" id="hit-button">Hit</button>
+            <button class="button" id="stay-button">Stay</button>
+        </div>
+        <div class="bg-icons-area">
+            <div class="bg-icons-text">
+                    <span class="text-area">Change background:</span>
+            </div>
+            <div class="bg-icons-buttons">
+                    <button id="bg-green-button"></button>
+                    <button id="bg-blue-button"></button>
+                    <button id="bg-red-button"></button>
+            </div>
+        </div>
+        <div class="counter-area">
+            <!-- TO DO -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
