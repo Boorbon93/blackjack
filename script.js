@@ -15,6 +15,7 @@ let backgroundGreenButton = document.getElementById('bg-green-button');
 let backgroundBlueButton = document.getElementById('bg-blue-button');
 let backgroundRedButton = document.getElementById('bg-red-button');
 let container = document.getElementById('container');
+let counterArea = document.getElementById('counter-area');
 
 
 //Game variables
@@ -32,6 +33,7 @@ let gameStarted = false,
 //Initialize first game
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
+counterArea.innerText = 'Player points: ' + playerWinCounter + '\n' + 'Dealer points: ' + dealerWinCounter;
 showStatus();
 
 newGameButton.addEventListener("click", function(){
@@ -223,15 +225,20 @@ function showStatus(){
     if (gameOver === true){
         if (playerWon === true){
             statusTextArea.innerText += 'You win!';
+            playerWinCounter++;
+            console.log(playerWinCounter);
         }
         else{
             statusTextArea.innerText += 'You lose!';
+            dealerWinCounter++;
         }
-    newGameButton.style.display = 'inline';
-    hitButton.style.display = 'none';
-    stayButton.style.display = 'none';
+        counterArea.innerText = 'Player points: ' + playerWinCounter + '\n' + 'Dealer points: ' + dealerWinCounter;
+        newGameButton.style.display = 'inline';
+        hitButton.style.display = 'none';
+        stayButton.style.display = 'none';
     }
 }
+
 
 function drawCard(){
 return deck.shift();

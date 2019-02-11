@@ -30,7 +30,16 @@ div {
     left: 20px; 
 }
 
-#bg-green-button{
+.counter-area {
+    height: 50px;
+    width: 200px;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+}
+
+#bg-green-button {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -42,7 +51,7 @@ div {
 	-webkit-box-shadow: 2px 3px 0px 0px rgba(138, 138, 138, 0.5);
 }
 
-#bg-blue-button{
+#bg-blue-button {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -54,7 +63,7 @@ div {
 	-webkit-box-shadow: 2px 3px 0px 0px rgba(138, 138, 138, 0.5);
 }
 
-#bg-red-button{
+#bg-red-button {
     display: inline-block;
     width: 40px;
     height: 40px;
