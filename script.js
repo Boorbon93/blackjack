@@ -226,7 +226,6 @@ function showStatus(){
         if (playerWon === true){
             statusTextArea.innerText += 'You win!';
             playerWinCounter++;
-            console.log(playerWinCounter);
         }
         else{
             statusTextArea.innerText += 'You lose!';
