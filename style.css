@@ -75,6 +75,7 @@ div {
     font-family: 'Sancreek';
     text-shadow:0px 2px 0px #3b211f
 }
+
 .card-face {
     width: 7%;
     margin: 20px 10px;
@@ -147,4 +148,20 @@ div {
 	position:relative;
     top:2px;
     left: 1px;
+}
+
+#new-game-button {
+    animation: pulse-back 0.75s ease-in-out infinite both;
+}
+
+@keyframes pulse-back {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
 }
