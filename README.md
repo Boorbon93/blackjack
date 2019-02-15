@@ -10,14 +10,14 @@ https://boorbon93.github.io/blackjack/
 ## About
 ##### Blackjack game inspired by Mark Zamoyta PluralSight webinar.
 
-####Done:
+#### Done:
 - implement `createDeck`, `shuffleDeck`, `showStatus` mechanisms and game logic
 - display card graphics and card names
 - create `calculateScores` mechanism, display Scores 
 - implement background changing mechanism
 - implement and display `playerWinCounter` and `dealerWinCounter`
 
-####To do:
+#### To do:
 
 - story: dealer has only one visible card before player bets
 - story: betting system
